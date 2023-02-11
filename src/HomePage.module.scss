@@ -1,0 +1,170 @@
+.container {
+  display: flex;
+  column-gap: 2rem;
+  flex-direction: row-reverse;
+  justify-content: left;
+}
+
+
+@keyframes keyframe-anim1 {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+.anim1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: keyframe-anim1;
+  animation-duration: 4s;
+}
+
+@keyframes keyframe-anim2 {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+
+.anim2 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: keyframe-anim2;
+  animation-duration: 4s;
+}
+
+@keyframes keyframe-anim3 {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+@keyframes keyframe-custom {
+  0%   {background-color:red; left:0px; top:0px;}
+  100% {background-color:yellow; left:0px; top:200px;}
+}
+
+.anim3 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: keyframe-anim3;
+  animation-duration: 4s;
+}
+
+.anim4 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: keyframe-anim3;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+
+.anim5 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: keyframe-anim3;
+  animation-duration: 4s;
+  animation-delay: -2s;
+}
+
+.anim6 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: keyframe-anim3;
+  animation-duration: 4s;
+  animation-iteration-count: 3;
+}
+
+.anim7 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: keyframe-anim3;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.anim8 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: keyframe-anim3;
+  animation-duration: 4s;
+  animation-direction: reverse;
+}
+
+.anim9 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: keyframe-anim3;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
+.anim10 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: keyframe-anim3;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  animation-direction: alternate-reverse;
+}
+
+.anim11 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation-name: keyframe-custom;
+  animation-duration: 3s;
+  animation-fill-mode: backwards;
+  //animation-direction: alternate;
+}
+
+.anim12 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation-name: keyframe-custom, keyframe-anim3;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.anim13 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: keyframe-custom 1s linear 0s 1 alternate, keyframe-anim3 1s linear 0s alternate;
+}
+
+@keyframes sample {
+  0% { transform: rotateY(0deg);}
+  100% { transform: rotateY(180deg);}
+}
+
+.anim14 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  animation: sample 1s linear 0s 1 alternate;
+}
