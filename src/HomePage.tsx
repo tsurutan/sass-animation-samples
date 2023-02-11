@@ -7,6 +7,7 @@ export const HomePage: React.FC = () => {
     <div className="App">
       <nav>
         <Link to="/card">Card</Link>
+        <Link to="/3d">3D</Link>
       </nav>
       <h1>Animation List</h1>
       <div className={styles.container}>
