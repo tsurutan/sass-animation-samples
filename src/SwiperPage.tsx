@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "SwiperPage.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { WelcomeCard } from "WelcomeCard";
 
 export const SwiperPage: React.FC = () => {
   const [borderStyle, setBorderStyle] = useState<React.CSSProperties>({
@@ -69,12 +70,14 @@ export const SwiperPage: React.FC = () => {
           if (swiper.activeIndex !== 0) {
             setBorderStyle((style) => ({
               ...style,
+              opacity: 0,
               width: 0,
             }));
             setToggleOpacity(1);
           } else {
             setBorderStyle((style) => ({
               ...style,
+              opacity: 1,
               width: "100%",
             }));
             setToggleOpacity(0);
@@ -82,9 +85,7 @@ export const SwiperPage: React.FC = () => {
         }}
       >
         <SwiperSlide className={styles.swiper}>
-          <div className={styles.card}>
-            <p>Slide 1</p>
-          </div>
+          <WelcomeCard />
         </SwiperSlide>
         <SwiperSlide className={styles.swiper}>
           <div className={styles.card}>

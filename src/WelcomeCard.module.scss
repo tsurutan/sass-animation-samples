@@ -1,0 +1,93 @@
+.container {
+  height: 90%;
+  background-color: dodgerblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2rem;
+}
+
+.message {
+  display: flex;
+  position: relative;
+}
+
+.messageSuffix {
+  position: absolute;
+  animation: 3s ease-in-out infinite 0s none move;
+}
+
+// display 3
+// transition 1
+// 3 1 3 1 3 1
+// 100 / 12 = 8.3
+// 0-25 25-33.3 33.3-58.3 58.3-64.6 64.6-89.6 89.6-100
+
+
+@keyframes move {
+  0% {
+    top: -4rem;
+  }
+  25% {
+    top: -4rem;
+  }
+  33.3% {
+    top: -2rem;
+  }
+  58.3% {
+    top: -2rem;
+  }
+  64.6% {
+    top: 0;
+  }
+  89.6% {
+    top: 0;
+  }
+  100% {
+    top: -4rem;
+  }
+}
+
+@keyframes first {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 0;
+  }
+  58.3% {
+    opacity: 0;
+  }
+  64.6% {
+    opacity: 0;
+  }
+  89.6% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.firstMessage {
+  opacity: 0;
+  animation: 3s linear infinite 2s none first;
+}
+
+.secondMessage {
+  opacity: 0;
+  animation: 3s linear infinite 1s none first;
+}
+
+.thirdMessage {
+  animation: 3s linear infinite 0s none first;
+}
