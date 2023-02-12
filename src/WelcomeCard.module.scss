@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 8px;
 }
 
 .content {
@@ -54,7 +55,7 @@
   }
 }
 
-@keyframes first {
+@keyframes fade-in-out {
   0% {
     opacity: 1;
   }
@@ -80,14 +81,14 @@
 
 .firstMessage {
   opacity: 0;
-  animation: 3s linear infinite 2s none first;
+  animation: 3s linear infinite 2s none fade-in-out;
 }
 
 .secondMessage {
   opacity: 0;
-  animation: 3s linear infinite 1s none first;
+  animation: 3s linear infinite 1s none fade-in-out;
 }
 
 .thirdMessage {
-  animation: 3s linear infinite 0s none first;
+  animation: 3s linear infinite 0s none fade-in-out;
 }
