@@ -5,6 +5,13 @@
   justify-content: left;
 }
 
+.button {
+  all: unset;
+  background-color: #2980b9;
+  color: white;
+  margin-right: 2rem;
+  padding: 1rem;
+}
 
 @keyframes keyframe-anim1 {
   from {background-color: red;}

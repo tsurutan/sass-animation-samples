@@ -6,8 +6,15 @@ export const HomePage: React.FC = () => {
   return (
     <div className="App">
       <nav>
-        <Link to="/card">Card</Link>
-        <Link to="/3d">3D</Link>
+        <Link className={styles.button} to="/card">
+          Card
+        </Link>
+        <Link className={styles.button} to="/3d">
+          3D
+        </Link>
+        <Link className={styles.button} to="/swiper">
+          Swiper
+        </Link>
       </nav>
       <h1>Animation List</h1>
       <div className={styles.container}>
